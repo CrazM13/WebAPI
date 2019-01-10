@@ -4,7 +4,12 @@ const http = require("http");
 
 const app = express();
 
-var publicPath = path.resolve(__dirname, "public");
-app.use(express.static(publicPath));
+app.set("views", path.resolve(__dirname, "views"));
 
+app.get("/", function(req, res) {
+    res.render("index.html");
+});
 
+http.createServer(app).listen(3000, function() {
+    console.log("Server Running On Port 3000");
+});
