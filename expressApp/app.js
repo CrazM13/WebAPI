@@ -6,17 +6,17 @@ const app = express();
 
 // Home Page
 router.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/views/index.html'));
+	res.sendFile(path.join(__dirname + '/views/index.html'));
 });
 
 // About Page
 router.get('/about', function(req, res) {
-    res.sendFile(path.join(__dirname + '/views/about.html'));
+	res.sendFile(path.join(__dirname + '/views/about.html'));
 });
 
 // Contact Page
 router.get('/contact', function(req, res) {
-    res.sendFile(path.join(__dirname + '/views/contact.html'));
+	res.sendFile(path.join(__dirname + '/views/contact.html'));
 });
 
 // Set Up Server
